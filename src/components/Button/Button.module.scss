@@ -4,6 +4,7 @@
     text-align: center;
     font-size: 1.6rem;
     font-weight: 700;
+    font-family: 'ProximaNova', sans-serif;
     border-radius: 9px;
     min-width: 100px;
     padding: 9px 16px;
@@ -15,6 +16,12 @@
 .icon + .title,
 .title + .icon {
     margin-left: 8px;
+}
+
+.icon{
+    display: inline-flex;
+    width: 24px;
+    text-align: center;
 }
 
 .primary {

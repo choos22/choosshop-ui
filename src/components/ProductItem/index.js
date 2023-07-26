@@ -5,16 +5,16 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
-function ProductItem() {
+function ProductItem({ data }) {
     return (
         <div className={cx('wrapper')}>
-            <img className={cx('avatar')} src={images.avatar} alt="Hoaa"></img>
+            <img className={cx('avatar')} src={data.avatar} alt="Hoaa"></img>
             <div className={cx('info')}>
                 <h4 className={cx('name')}>
-                    <span>Nguyễn văn a</span>
-                    <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
+                    <span>{data.full_name}</span>
+                    {data.tick && <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />}
                 </h4>
-                <span className={cx('userName')}>nguyenvana</span>
+                <span className={cx('userName')}>{data.nickname}</span>
             </div>
         </div>
     );
